@@ -17,7 +17,19 @@ class EvenAndOdd extends Component {
   }
 
   assignEvensAndOdds(userInput){
-    
+    var arr =userInput.split(',');
+    var odds =[];
+    var evens =[];
+
+    for(var i=0; i<arr.length; i++){
+      if(arr[i]%2===0){
+        evens.push(parseInt(arr[i], 10));
+      }else{
+        odds.push(parseInt(arr[i], 10));
+      }
+    }
+    this.setState({ evenArray:evens, oddArray:odds})
+  
   }
   
   render() {
